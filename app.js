@@ -13,8 +13,10 @@ for (let i = 0; i <= rows; i++) {
 
     if (i >= 7 && i <= 9 && j === 3) divCreator.classList.add("tree");
     if (i >= 4 && i <= 7) {
-      if (j === 3 || j === 4 || j === 2 || j === 4)
+      if ((i === 7 && j === 2) || (i === 7 && j === 4))
         divCreator.classList.add("grass");
+      if (j === 4 || j === 2 || j === 4) divCreator.classList.add("grass");
+      if (j === 3 && i < 7) divCreator.classList.add("grass");
     }
     if (i >= 8 && i <= 9) {
       if (j === 7 || j == 14) divCreator.classList.add("rock");
